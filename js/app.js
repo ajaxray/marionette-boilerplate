@@ -6,7 +6,7 @@ define([
 	'collections/Nav',
 	'views/MenuView',
 	'views/Footer'
-], function (Backbone, Marionette, Nav, MenuView,  Footer) {
+], function (Backbone, Marionette, Nav, MenuView, Footer) {
 	'use strict';
 
 	var app = new Marionette.Application();
@@ -31,6 +31,11 @@ define([
 		app.footer.show(footer);
 	});
 
+    app.on("initialize:after", function(options){
+        if (Backbone.history){
+            Backbone.history.start();
+        }
+    });
 
 //	app.listenTo(todoList, 'all', function () {
 //		app.main.$el.toggle(todoList.length > 0);

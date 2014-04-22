@@ -3,7 +3,7 @@
 define([
 	'marionette',
 	'templates',
-    'underscore'
+    'underscore',
 ], function (Marionette, templates, _) {
 	'use strict';
 

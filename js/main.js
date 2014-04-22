@@ -5,7 +5,8 @@ require.config({
 		marionette: '../bower_components/backbone.marionette/lib/backbone.marionette',
 		jquery: '../bower_components/jquery/jquery',
 		localStorage: '../bower_components/backbone.localStorage/backbone.localStorage',
-		tpl: 'lib/tpl'
+		tpl: 'lib/tpl',
+        bootstrap: 'lib/bootstrap.min'
 	},
 
 	shim: {
@@ -30,16 +31,15 @@ require.config({
 require([
 	'app',
 	'backbone',
-	'routers/index',
-	'controllers/index'
-], function (app, Backbone, Router, Controller) {
+    'modules/Pages',
+    'jquery',
+	'bootstrap'
+], function (app, Backbone, PagesModule) {
 	'use strict';
 
     app.addInitializer(function() {
-        app.router = new Router({ controller: Controller });
+        PagesModule.start();
     });
+
 	app.start();
-
-    Backbone.history.start();
-
 });
