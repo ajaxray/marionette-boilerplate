@@ -10,4 +10,6 @@ This setup includes -
 * RequireJS (AMD)
 * Twitter Bootstrap (3.1.1)
 
-**Batteries included!** You can just get it and start coding instantly. There is no dependency on any other tool or library.
+Here is a [live demo](http://ajaxray.com/demo/marionette-boilerplate) of this setup.
+
+**Batteries included!** You can just get it and start coding instantly. There is no dependency on any other tool or library to get started.
