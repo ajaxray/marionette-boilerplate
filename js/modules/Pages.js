@@ -7,12 +7,12 @@ define([
     'routers/index',
     'controllers/index'
 ], function(app, Marionette, Router, Controller){
-
+    console.log('Module:Pages => Loading...');
     var PagesModule = app.module("Pages", function(Pages) {
         this.startWithParent = false;
 
         this.addInitializer(function(){
-            console.log('Module => Pages module initialized');
+            console.log('Module:Pages => initialized');
 
             this.router = new Router({ controller: Controller });
         });

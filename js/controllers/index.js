@@ -15,6 +15,13 @@ define([
 
             app.vent.trigger('menu:activate', pageModel);
             app.main.show(new PageView({model: pageModel}));
+
+            if(pageName == 'about') {
+                console.log('Example of on demand module loading..');
+                require(['modules/Example'], function(Example) {
+                    Example.start();
+                });
+            }
 		},
         hello: function() {
             console.log('In route /hi');

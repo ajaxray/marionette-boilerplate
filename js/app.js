@@ -16,8 +16,6 @@ define([
         {title: 'About', name: 'about'},
         {title: 'Contact', name: 'contact'}
     ]);
-
-	var footer = new Footer();
     var menu = new MenuView({collection: app.pages});
 
 	app.addRegions({
@@ -28,7 +26,7 @@ define([
 
 	app.addInitializer(function () {
         app.menu.show(menu);
-		app.footer.show(footer);
+		app.footer.show(new Footer());
 	});
 
     app.on("initialize:after", function(options){
@@ -36,11 +34,6 @@ define([
             Backbone.history.start();
         }
     });
-
-//	app.listenTo(todoList, 'all', function () {
-//		app.main.$el.toggle(todoList.length > 0);
-//		app.footer.$el.toggle(todoList.length > 0);
-//	});
 
 	app.vent.on('menu:activate', function (activePageModel) {
         menu.collection.findWhere({active: true})

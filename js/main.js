@@ -30,11 +30,10 @@ require.config({
 
 require([
 	'app',
-	'backbone',
     'modules/Pages',
     'jquery',
 	'bootstrap'
-], function (app, Backbone, PagesModule) {
+], function (app, PagesModule) {
 	'use strict';
 
     app.addInitializer(function() {
