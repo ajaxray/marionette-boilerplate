@@ -21,7 +21,7 @@ define([
     });
 
 //    PagesModule.addFinalizer(function(){
-//        MyApp.someRegion.close();
+//        app.someRegion.close();
 //    });
 
     return PagesModule;

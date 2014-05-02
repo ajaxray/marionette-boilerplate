@@ -22,10 +22,14 @@ require.config({
 		marionette: {
 			exports: 'Backbone.Marionette',
 			deps: ['backbone']
-		}
-	},
+		},
 
-	deps: ['jquery', 'underscore']
+        bootstrap: {
+            deps: ['jquery']
+        }
+
+	},
+    waitSeconds: 60
 });
 
 require([
