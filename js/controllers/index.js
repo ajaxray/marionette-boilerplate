@@ -2,8 +2,9 @@
 
 define([
 	'app',
+    'views/HomeView',
     'views/PageView'
-], function (app, PageView) {
+], function (app, HomeView, PageView) {
 	'use strict';
 
 	return {
@@ -14,7 +15,11 @@ define([
 			var pageModel = app.pages.findWhere({name: pageName});
 
             app.vent.trigger('menu:activate', pageModel);
-            app.main.show(new PageView({model: pageModel}));
+            if(pageName == 'home') {
+                app.main.show(new HomeView({model: pageModel}));
+            } else {
+                app.main.show(new PageView({model: pageModel}));
+            }
 
             if(pageName == 'about') {
                 console.log('Example of on demand module loading..');

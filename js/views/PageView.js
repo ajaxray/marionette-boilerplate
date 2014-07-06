@@ -16,12 +16,6 @@ define([
 
         onBeforeRender: function(){
             this.model.set('content', _.result(templates.pages, this.model.get('name')))
-        },
-
-        onRender: function() {
-            if(this.model.get('name') == 'home') {
-                this.ui.header.remove();
-            }
         }
 
 	});

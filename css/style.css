@@ -55,12 +55,13 @@ body {
     font-size: 21px;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-.marketing p + h4 {
-    margin-top: 28px;
+#notification {
+    display: none;
+    position: fixed;
+    width: 700px;
+    z-index: 1;
+    opacity: .94;
+    top: 20px;
 }
 
 /* Responsive: Portrait tablets and up */
